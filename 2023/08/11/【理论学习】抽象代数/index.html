@@ -20,25 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="hello everyone! this is my academic blog!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Home of Mr. 5">
-<meta property="og:url" content="http://example.com/index.html">
+    <meta name="description" content="群群：   （结合律）  （单位元）  （逆元）   如果再加上  （交换律）  那就是。 定理： 若是群，则  是唯一的；  ，唯一。         证明：  假设都是单位元，则。  假设，则 。   3.4.5.不证了。 子群： 若是群，则    记作  （编写中）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【理论学习】抽象代数">
+<meta property="og:url" content="http://example.com/2023/08/11/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/index.html">
 <meta property="og:site_name" content="Home of Mr. 5">
-<meta property="og:description" content="hello everyone! this is my academic blog!">
+<meta property="og:description" content="群群：   （结合律）  （单位元）  （逆元）   如果再加上  （交换律）  那就是。 定理： 若是群，则  是唯一的；  ，唯一。         证明：  假设都是单位元，则。  假设，则 。   3.4.5.不证了。 子群： 若是群，则    记作  （编写中）">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-10T17:44:19.000Z">
+<meta property="article:modified_time" content="2023-08-10T17:51:28.683Z">
 <meta property="article:author" content="Wenhao Wu">
+<meta property="article:tag" content="抽象代数">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023/08/11/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/08/11/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/","path":"2023/08/11/【理论学习】抽象代数/","title":"【理论学习】抽象代数"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Home of Mr. 5</title>
+<title>【理论学习】抽象代数 | Home of Mr. 5</title>
   
 
 
@@ -183,7 +186,7 @@ mjx-container[display="true"] + br {
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Home of Mr. 5</h1>
+      <p class="site-title">Home of Mr. 5</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">some silly thoughts</p>
@@ -210,7 +213,7 @@ mjx-container[display="true"] + br {
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -223,6 +226,7 @@ mjx-container[display="true"] + br {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BE%A4"><span class="nav-number">1.</span> <span class="nav-text">群</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -264,16 +268,17 @@ mjx-container[display="true"] + br {
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/11/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -287,13 +292,13 @@ mjx-container[display="true"] + br {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
+      <meta itemprop="name" content="【理论学习】抽象代数 | Home of Mr. 5">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/08/11/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" class="post-title-link" itemprop="url">【理论学习】抽象代数</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          【理论学习】抽象代数
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -326,7 +331,7 @@ mjx-container[display="true"] + br {
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="群"><a href="#群" class="headerlink" title="群"></a>群</h2><p><strong>群</strong>：</p>
+        <h2 id="群"><a href="#群" class="headerlink" title="群"></a>群</h2><p><strong>群</strong>：</p>
 <p><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="18.429ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 8145.4 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(389,0)"><path data-c="1D43A" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q492 659 471 656T418 643T357 615T294 567T236 496T189 394T158 260Q156 242 156 221Q156 173 170 136T206 79T256 45T308 28T353 24Q407 24 452 47T514 106Q517 114 529 161T541 214Q541 222 528 224T468 227H431Q425 233 425 235T427 254Q431 267 437 273H454Q494 271 594 271Q634 271 659 271T695 272T707 272Q721 272 721 263Q721 261 719 249Q714 230 709 228Q706 227 694 227Q674 227 653 224Q646 221 643 215T629 164Q620 131 614 108Q589 6 586 3Q584 1 581 1Q571 1 553 21T530 52Q530 53 528 52T522 47Q448 -22 322 -22Q201 -22 126 55T50 252Z"></path></g><g data-mml-node="mo" transform="translate(1175,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mo" transform="translate(1619.7,0)"><path data-c="B7" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mo" transform="translate(1897.7,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mtext" transform="translate(2286.7,0)"><path data-c="A0" d=""></path></g><g data-mml-node="mi" transform="translate(2536.7,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(2881.7,0)"><path data-c="1D460" d="M131 289Q131 321 147 354T203 415T300 442Q362 442 390 415T419 355Q419 323 402 308T364 292Q351 292 340 300T328 326Q328 342 337 354T354 372T367 378Q368 378 368 379Q368 382 361 388T336 399T297 405Q249 405 227 379T204 326Q204 301 223 291T278 274T330 259Q396 230 396 163Q396 135 385 107T352 51T289 7T195 -10Q118 -10 86 19T53 87Q53 126 74 143T118 160Q133 160 146 151T160 120Q160 94 142 76T111 58Q109 57 108 57T107 55Q108 52 115 47T146 34T201 27Q237 27 263 38T301 66T318 97T323 122Q323 150 302 164T254 181T195 196T148 231Q131 256 131 289Z"></path></g><g data-mml-node="mtext" transform="translate(3350.7,0)"><path data-c="A0" d=""></path></g><g data-mml-node="mi" transform="translate(3600.7,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mtext" transform="translate(4129.7,0)"><path data-c="A0" d=""></path></g><g data-mml-node="mi" transform="translate(4379.7,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"></path></g><g data-mml-node="mi" transform="translate(4856.7,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(5307.7,0)"><path data-c="1D45C" d="M201 -11Q126 -11 80 38T34 156Q34 221 64 279T146 380Q222 441 301 441Q333 441 341 440Q354 437 367 433T402 417T438 387T464 338T476 268Q476 161 390 75T201 -11ZM121 120Q121 70 147 48T206 26Q250 26 289 58T351 142Q360 163 374 216T388 308Q388 352 370 375Q346 405 306 405Q243 405 195 347Q158 303 140 230T121 120Z"></path></g><g data-mml-node="mi" transform="translate(5792.7,0)"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6364.7,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="mo" transform="translate(7145.4,0)"><path data-c="21D4" d="M308 524Q318 526 323 526Q340 526 340 514Q340 507 336 499Q326 476 314 454T292 417T274 391T260 374L255 368Q255 367 500 367Q744 367 744 368L739 374Q734 379 726 390T707 416T685 453T663 499Q658 511 658 515Q658 525 680 525Q687 524 690 523T695 519T701 507Q766 359 902 287Q921 276 939 269T961 259T966 250Q966 246 965 244T960 240T949 236T930 228T902 213Q763 137 701 -7Q697 -16 695 -19T690 -23T680 -25Q658 -25 658 -15Q658 -11 663 1Q673 24 685 46T707 83T725 109T739 126L744 132Q744 133 500 133Q255 133 255 132L260 126Q265 121 273 110T292 84T314 47T336 1Q341 -11 341 -15Q341 -25 319 -25Q312 -24 309 -23T304 -19T298 -7Q233 141 97 213Q83 221 70 227T51 235T41 239T35 243T34 250T35 256T40 261T51 265T70 273T97 287Q235 363 299 509Q305 522 308 524ZM792 319L783 327H216Q183 294 120 256L110 250L120 244Q173 212 207 181L216 173H783L792 181Q826 212 879 244L889 250L879 256Q826 288 792 319Z"></path></g></g></g></svg></mjx-container></p>
 <ol>
 <li><p><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="31.337ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 13850.9 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="2200" d="M0 673Q0 684 7 689T20 694Q32 694 38 680T82 567L126 451H430L473 566Q483 593 494 622T512 668T519 685Q524 694 538 694Q556 692 556 674Q556 670 426 329T293 -15Q288 -22 278 -22T263 -15Q260 -11 131 328T0 673ZM414 410Q414 411 278 411T142 410L278 55L414 410Z"></path></g><g data-mml-node="mi" transform="translate(556,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(1085,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(1529.7,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(1958.7,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(2403.3,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(3114.1,0)"><path data-c="2208" d="M84 250Q84 372 166 450T360 539Q361 539 377 539T419 540T469 540H568Q583 532 583 520Q583 511 570 501L466 500Q355 499 329 494Q280 482 242 458T183 409T147 354T129 306T124 272V270H568Q583 262 583 250T568 230H124V228Q124 207 134 177T167 112T231 48T328 7Q355 1 466 0H570Q583 -10 583 -20Q583 -32 568 -40H471Q464 -40 446 -40T417 -41Q262 -41 172 45Q84 127 84 250Z"></path></g><g data-mml-node="mi" transform="translate(4058.9,0)"><path data-c="1D43A" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q492 659 471 656T418 643T357 615T294 567T236 496T189 394T158 260Q156 242 156 221Q156 173 170 136T206 79T256 45T308 28T353 24Q407 24 452 47T514 106Q517 114 529 161T541 214Q541 222 528 224T468 227H431Q425 233 425 235T427 254Q431 267 437 273H454Q494 271 594 271Q634 271 659 271T695 272T707 272Q721 272 721 263Q721 261 719 249Q714 230 709 228Q706 227 694 227Q674 227 653 224Q646 221 643 215T629 164Q620 131 614 108Q589 6 586 3Q584 1 581 1Q571 1 553 21T530 52Q530 53 528 52T522 47Q448 -22 322 -22Q201 -22 126 55T50 252Z"></path></g><g data-mml-node="mo" transform="translate(4844.9,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mi" transform="translate(5289.6,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(6040.8,0)"><path data-c="B7" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mo" transform="translate(6541,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(6930,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(7581.2,0)"><path data-c="B7" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mi" transform="translate(8081.4,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(8514.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(9181.2,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mo" transform="translate(10237,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(10626,0)"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mo" transform="translate(11377.2,0)"><path data-c="B7" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mi" transform="translate(11877.4,0)"><path data-c="1D44F" d="M73 647Q73 657 77 670T89 683Q90 683 161 688T234 694Q246 694 246 685T212 542Q204 508 195 472T180 418L176 399Q176 396 182 402Q231 442 283 442Q345 442 383 396T422 280Q422 169 343 79T173 -11Q123 -11 82 27T40 150V159Q40 180 48 217T97 414Q147 611 147 623T109 637Q104 637 101 637H96Q86 637 83 637T76 640T73 647ZM336 325V331Q336 405 275 405Q258 405 240 397T207 376T181 352T163 330L157 322L136 236Q114 150 114 114Q114 66 138 42Q154 26 178 26Q211 26 245 58Q270 81 285 114T318 219Q336 291 336 325Z"></path></g><g data-mml-node="mo" transform="translate(12306.4,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(12917.7,0)"><path data-c="B7" d="M78 250Q78 274 95 292T138 310Q162 310 180 294T199 251Q199 226 182 208T139 190T96 207T78 250Z"></path></g><g data-mml-node="mi" transform="translate(13417.9,0)"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g></g></g></svg></mjx-container>（结合律）</p>
@@ -372,7 +377,6 @@ mjx-container[display="true"] + br {
 <p><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.09ex;" xmlns="http://www.w3.org/2000/svg" width="6.804ex" height="1.686ex" role="img" focusable="false" viewBox="0 -705 3007.6 745"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43B" d="M228 637Q194 637 192 641Q191 643 191 649Q191 673 202 682Q204 683 219 683Q260 681 355 681Q389 681 418 681T463 682T483 682Q499 682 499 672Q499 670 497 658Q492 641 487 638H485Q483 638 480 638T473 638T464 637T455 637Q416 636 405 634T387 623Q384 619 355 500Q348 474 340 442T328 395L324 380Q324 378 469 378H614L615 381Q615 384 646 504Q674 619 674 627T617 637Q594 637 587 639T580 648Q580 650 582 660Q586 677 588 679T604 682Q609 682 646 681T740 680Q802 680 835 681T871 682Q888 682 888 672Q888 645 876 638H874Q872 638 869 638T862 638T853 637T844 637Q805 636 794 634T776 623Q773 618 704 340T634 58Q634 51 638 51Q646 48 692 46H723Q729 38 729 37T726 19Q722 6 716 0H701Q664 2 567 2Q533 2 504 2T458 2T437 1Q420 1 420 10Q420 15 423 24Q428 43 433 45Q437 46 448 46H454Q481 46 514 49Q520 50 522 50T528 55T534 64T540 82T547 110T558 153Q565 181 569 198Q602 330 602 331T457 332H312L279 197Q245 63 245 58Q245 51 253 49T303 46H334Q340 38 340 37T337 19Q333 6 327 0H312Q275 2 178 2Q144 2 115 2T69 2T48 1Q31 1 31 10Q31 12 34 24Q39 43 44 45Q48 46 59 46H65Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Q285 635 228 637Z"></path></g><g data-mml-node="mo" transform="translate(1165.8,0)"><path data-c="3C" d="M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z"></path></g><g data-mml-node="mi" transform="translate(2221.6,0)"><path data-c="1D43A" d="M50 252Q50 367 117 473T286 641T490 704Q580 704 633 653Q642 643 648 636T656 626L657 623Q660 623 684 649Q691 655 699 663T715 679T725 690L740 705H746Q760 705 760 698Q760 694 728 561Q692 422 692 421Q690 416 687 415T669 413H653Q647 419 647 422Q647 423 648 429T650 449T651 481Q651 552 619 605T510 659Q492 659 471 656T418 643T357 615T294 567T236 496T189 394T158 260Q156 242 156 221Q156 173 170 136T206 79T256 45T308 28T353 24Q407 24 452 47T514 106Q517 114 529 161T541 214Q541 222 528 224T468 227H431Q425 233 425 235T427 254Q431 267 437 273H454Q494 271 594 271Q634 271 659 271T695 272T707 272Q721 272 721 263Q721 261 719 249Q714 230 709 228Q706 227 694 227Q674 227 653 224Q646 221 643 215T629 164Q620 131 614 108Q589 6 586 3Q584 1 581 1Q571 1 553 21T530 52Q530 53 528 52T522 47Q448 -22 322 -22Q201 -22 126 55T50 252Z"></path></g></g></g></svg></mjx-container></p>
 <p>（编写中）</p>
 
-      
     </div>
 
     
@@ -380,278 +384,21 @@ mjx-container[display="true"] + br {
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" rel="tag"># 抽象代数</a>
+          </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/10/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91The%20Design%20of%20Competitive%20Online%20Algorithms%20via%20a%20Primal%E2%80%93Dual%20Approach/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/08/10/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91The%20Design%20of%20Competitive%20Online%20Algorithms%20via%20a%20Primal%E2%80%93Dual%20Approach/" class="post-title-link" itemprop="url">【论文评述】The Design of Competitive Online Algorithms via a Primal–Dual Approach</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-08-10 15:44:38 / 修改时间：15:47:24" itemprop="dateCreated datePublished" datetime="2023-08-10T15:44:38+08:00">2023-08-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0/" itemprop="url" rel="index"><span itemprop="name">论文评述</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>文献：<a target="_blank" rel="noopener" href="https://www.tau.ac.il/~nivb/download/pd-survey.pdf">Buchbinder N, Naor J S. The design of competitive online algorithms via a primal–dual approach[J]. Foundations and Trends® in Theoretical Computer Science, 2009, 3(2–3): 93-263.</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/08/10/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91The%20Design%20of%20Competitive%20Online%20Algorithms%20via%20a%20Primal%E2%80%93Dual%20Approach/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/08/07/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91Constraints%20in%20Fair%20Division/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/08/07/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91Constraints%20in%20Fair%20Division/" class="post-title-link" itemprop="url">【论文评述】Constraints in Fair Division</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-08-07 00:07:27" itemprop="dateCreated datePublished" datetime="2023-08-07T00:07:27+08:00">2023-08-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-10 15:43:32" itemprop="dateModified" datetime="2023-08-10T15:43:32+08:00">2023-08-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0/" itemprop="url" rel="index"><span itemprop="name">论文评述</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>文献：<a target="_blank" rel="noopener" href="https://www.sigecom.org/exchanges/volume_19/2/SUKSOMPONG.pdf">Suksompong W. Constraints in fair division[J]. ACM SIGecom Exchanges, 2021, 19(2): 46-61.</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/08/07/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91Constraints%20in%20Fair%20Division/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/08/10/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91The%20Design%20of%20Competitive%20Online%20Algorithms%20via%20a%20Primal%E2%80%93Dual%20Approach/" rel="prev" title="【论文评述】The Design of Competitive Online Algorithms via a Primal–Dual Approach">
+                  <i class="fa fa-chevron-left"></i> 【论文评述】The Design of Competitive Online Algorithms via a Primal–Dual Approach
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/28/ZKP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/07/28/ZKP/" class="post-title-link" itemprop="url">【理论学习】【科研点子】【NUS游记】Exploring Steganagraphy &#58; From LSB to ZKP</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-07-28 23:52:45" itemprop="dateCreated datePublished" datetime="2023-07-28T23:52:45+08:00">2023-07-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-01 02:07:19" itemprop="dateModified" datetime="2023-08-01T02:07:19+08:00">2023-08-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">理论学习</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这段时间去NUS了，进了安全相关的课堂，小组project是数字隐写。最后我们做了对最简单的LSB算法的鲁棒性和安全性的改进，还蛮有意思。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/07/28/ZKP/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -659,559 +406,9 @@ mjx-container[display="true"] + br {
 
 
 
-    
 
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/06/29/%E3%80%90%E7%A7%91%E6%99%AE%E6%95%85%E4%BA%8B%E3%80%91%E9%87%91%E9%92%B1%E3%80%81%E8%82%BE%E8%84%8F%E3%80%81%E5%9B%BE%E5%8C%B9%E9%85%8D/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/06/29/%E3%80%90%E7%A7%91%E6%99%AE%E6%95%85%E4%BA%8B%E3%80%91%E9%87%91%E9%92%B1%E3%80%81%E8%82%BE%E8%84%8F%E3%80%81%E5%9B%BE%E5%8C%B9%E9%85%8D/" class="post-title-link" itemprop="url">【科普故事】金钱、肾脏、图匹配</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-06-29 11:05:42" itemprop="dateCreated datePublished" datetime="2023-06-29T11:05:42+08:00">2023-06-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-07-02 21:11:12" itemprop="dateModified" datetime="2023-07-02T21:11:12+08:00">2023-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%A7%91%E6%99%AE%E6%95%85%E4%BA%8B/" itemprop="url" rel="index"><span itemprop="name">科普故事</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>请移步我的微信公众号阅读：</p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/7EUtthL5Gibai_y0TeZ_yQ">金钱、肾脏、图匹配</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/11/%E3%80%90%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92%E3%80%91%E4%B8%80%E4%BA%9B%E7%9C%8B%E4%B8%8A%E5%8E%BB%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B9%A6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/05/11/%E3%80%90%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92%E3%80%91%E4%B8%80%E4%BA%9B%E7%9C%8B%E4%B8%8A%E5%8E%BB%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B9%A6/" class="post-title-link" itemprop="url">【阅读计划】一些看上去很有意思的书</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-05-11 20:42:12" itemprop="dateCreated datePublished" datetime="2023-05-11T20:42:12+08:00">2023-05-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-07 17:26:35" itemprop="dateModified" datetime="2023-08-07T17:26:35+08:00">2023-08-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/" itemprop="url" rel="index"><span itemprop="name">阅读计划</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这是我想读或尚未读完的一些书，不仅是科技类作品（<del>虽然这是一个academic blog</del>），</p>
-<p>本文不断更新or删除。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/05/11/%E3%80%90%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92%E3%80%91%E4%B8%80%E4%BA%9B%E7%9C%8B%E4%B8%8A%E5%8E%BB%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E4%B9%A6/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/25/%E3%80%90%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92%E3%80%91%E4%B8%80%E4%BA%9B%E7%9C%8B%E4%B8%8A%E5%8E%BB%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%96%87%E7%8C%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/25/%E3%80%90%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92%E3%80%91%E4%B8%80%E4%BA%9B%E7%9C%8B%E4%B8%8A%E5%8E%BB%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%96%87%E7%8C%AE/" class="post-title-link" itemprop="url">【阅读计划】一些看上去很有意思的文献</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-04-25 15:51:13" itemprop="dateCreated datePublished" datetime="2023-04-25T15:51:13+08:00">2023-04-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-08-07 17:26:33" itemprop="dateModified" datetime="2023-08-07T17:26:33+08:00">2023-08-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92/" itemprop="url" rel="index"><span itemprop="name">阅读计划</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这是许多我只瞥了一眼但是觉得很有趣的文章的大集合，</p>
-<p>本文不断更新or删除。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/25/%E3%80%90%E9%98%85%E8%AF%BB%E8%AE%A1%E5%88%92%E3%80%91%E4%B8%80%E4%BA%9B%E7%9C%8B%E4%B8%8A%E5%8E%BB%E5%BE%88%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E6%96%87%E7%8C%AE/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/24/%E3%80%90%E5%BC%80%E6%94%BE%E9%97%AE%E9%A2%98%E3%80%91%E8%B6%85%E7%AB%8B%E6%96%B9%E4%BD%93%E4%B8%AD%E7%9A%84%E6%9E%81%E5%80%BC%E9%9B%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/24/%E3%80%90%E5%BC%80%E6%94%BE%E9%97%AE%E9%A2%98%E3%80%91%E8%B6%85%E7%AB%8B%E6%96%B9%E4%BD%93%E4%B8%AD%E7%9A%84%E6%9E%81%E5%80%BC%E9%9B%86/" class="post-title-link" itemprop="url">【开放问题】超立方体中的极值集</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-04-24 22:12:01" itemprop="dateCreated datePublished" datetime="2023-04-24T22:12:01+08:00">2023-04-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-25 16:07:01" itemprop="dateModified" datetime="2023-04-25T16:07:01+08:00">2023-04-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BC%80%E6%94%BE%E9%97%AE%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">开放问题</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>发现了一篇叫做 <a target="_blank" rel="noopener" href="https://simons.berkeley.edu/sites/default/files/openprobsmerged.pdf">Real Analysis in Computer Science: A collection of Open Problems</a> 的文献，记录了许多计算机科学视域下的实分析领域的未解之谜。</p>
-<p>下面介绍一个文章提到的Boolean functions方向的很好理解的问题——Extremal sets in the hypercube。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/24/%E3%80%90%E5%BC%80%E6%94%BE%E9%97%AE%E9%A2%98%E3%80%91%E8%B6%85%E7%AB%8B%E6%96%B9%E4%BD%93%E4%B8%AD%E7%9A%84%E6%9E%81%E5%80%BC%E9%9B%86/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/11/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91Online%20Matching%20and%20Ad%20Allocation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/11/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91Online%20Matching%20and%20Ad%20Allocation/" class="post-title-link" itemprop="url">【论文评述】Online Matching and Ad Allocation</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-04-11 15:49:49" itemprop="dateCreated datePublished" datetime="2023-04-11T15:49:49+08:00">2023-04-11</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-25 14:24:30" itemprop="dateModified" datetime="2023-04-25T14:24:30+08:00">2023-04-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0/" itemprop="url" rel="index"><span itemprop="name">论文评述</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>文献：<a target="_blank" rel="noopener" href="https://www.cs.cmu.edu/~arielpro/15896s15/docs/paper13b.pdf">Mehta, A., 2013. Online matching and ad allocation. Foundations and Trends® in Theoretical Computer Science, 8(4), pp.265-368.</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/11/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91Online%20Matching%20and%20Ad%20Allocation/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/10/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91property%20testing%E2%80%94%E2%80%94%E5%BA%94%E7%94%A8yao's%20principle%E7%9A%84%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
-      <meta itemprop="name" content="Wenhao Wu">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Home of Mr. 5">
-      <meta itemprop="description" content="hello everyone! this is my academic blog!">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Home of Mr. 5">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/10/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91property%20testing%E2%80%94%E2%80%94%E5%BA%94%E7%94%A8yao's%20principle%E7%9A%84%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B/" class="post-title-link" itemprop="url">【理论学习】property testing——应用yao's principle的一个示例</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-04-10 10:29:24" itemprop="dateCreated datePublished" datetime="2023-04-10T10:29:24+08:00">2023-04-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-25 12:28:54" itemprop="dateModified" datetime="2023-04-25T12:28:54+08:00">2023-04-25</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">理论学习</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>property testing（性质检验）是一个专门的研究领域，中文互联网上最好的一篇介绍目前看来是CSDN的一篇博客，已注在本文最后。本文仅用一个property testing作为例子来应用yao’s principle，例子来自NUS的一篇lecture note——Yao’s Principle: Three Examples</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/04/10/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91property%20testing%E2%80%94%E2%80%94%E5%BA%94%E7%94%A8yao's%20principle%E7%9A%84%E4%B8%80%E4%B8%AA%E7%A4%BA%E4%BE%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -1272,7 +469,7 @@ mjx-container[display="true"] + br {
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"c-come","repo":"blog_comment","client_id":"9f567569ec504c5a6ecc","client_secret":"fb72b2f8de41bfddfde00be721b49346d6c88760","admin_user":"c-come","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d1546d731a9f30cc80127d57142a482b"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"c-come","repo":"blog_comment","client_id":"9f567569ec504c5a6ecc","client_secret":"fb72b2f8de41bfddfde00be721b49346d6c88760","admin_user":"c-come","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"6a8b61a2f162f03fda09b045488ca51a"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
