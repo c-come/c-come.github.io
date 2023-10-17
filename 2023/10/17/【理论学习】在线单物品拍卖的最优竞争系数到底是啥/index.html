@@ -20,12 +20,10 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="问题就是上面这个问题里描述的这个东西，我们关注的是c题。（“竞拍者的私人估值是”，翻译错了） 我很快就做出了的方案，那就是首先查看前一半的报价（每个都拒绝），然后按照前一半中的最高报价作为接下来的标价，一旦有人高于标价，就卖给他，证明已经在【练习】Twenty Lectures on Algorithmic Game Theory | Home of Mr. 5给出。 但是这个是不是紧的呢？">
-<meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="【理论学习？】在线单物品拍卖的最优竞争系数到底是啥？">
 <meta property="og:url" content="http://example.com/2023/10/17/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91%E5%9C%A8%E7%BA%BF%E5%8D%95%E7%89%A9%E5%93%81%E6%8B%8D%E5%8D%96%E7%9A%84%E6%9C%80%E4%BC%98%E7%AB%9E%E4%BA%89%E7%B3%BB%E6%95%B0%E5%88%B0%E5%BA%95%E6%98%AF%E5%95%A5/index.html">
 <meta property="og:site_name" content="Home of Mr. 5">
-<meta property="og:description" content="问题就是上面这个问题里描述的这个东西，我们关注的是c题。（“竞拍者的私人估值是”，翻译错了） 我很快就做出了的方案，那就是首先查看前一半的报价（每个都拒绝），然后按照前一半中的最高报价作为接下来的标价，一旦有人高于标价，就卖给他，证明已经在【练习】Twenty Lectures on Algorithmic Game Theory | Home of Mr. 5给出。 但是这个是不是紧的呢？">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://github.com/c-come/image_for_blog/blob/main/single-item.png?raw=true">
 <meta property="og:image" content="https://github.com/c-come/image_for_blog/blob/main/tim.png?raw=true">
@@ -35,7 +33,7 @@
 <meta property="og:image" content="https://github.com/c-come/image_for_blog/blob/main/t10.png?raw=true">
 <meta property="og:image" content="https://github.com/c-come/image_for_blog/blob/main/e%20tight.png?raw=true">
 <meta property="article:published_time" content="2023-10-17T03:51:55.000Z">
-<meta property="article:modified_time" content="2023-10-17T03:54:19.760Z">
+<meta property="article:modified_time" content="2023-10-17T03:59:18.958Z">
 <meta property="article:author" content="Wenhao Wu">
 <meta property="article:tag" content="拍卖">
 <meta property="article:tag" content="在线算法">
@@ -317,7 +315,7 @@ mjx-container[display="true"] + br {
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-10-17 11:51:55 / 修改时间：11:54:19" itemprop="dateCreated datePublished" datetime="2023-10-17T11:51:55+08:00">2023-10-17</time>
+      <time title="创建时间：2023-10-17 11:51:55 / 修改时间：11:59:18" itemprop="dateCreated datePublished" datetime="2023-10-17T11:51:55+08:00">2023-10-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -339,8 +337,8 @@ mjx-container[display="true"] + br {
     
     
     <div class="post-body" itemprop="articleBody">
-        <span id="more"></span>
-<hr>
+        <hr>
+<span id="more"></span>
 <p><img src="https://github.com/c-come/image_for_blog/blob/main/single-item.png?raw=true" title="" alt="single-item" data-align="center"></p>
 <p>问题就是上面这个问题里描述的这个东西，我们关注的是c题。（“竞拍者的私人估值是<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.357ex;" xmlns="http://www.w3.org/2000/svg" width="1.837ex" height="1.359ex" role="img" focusable="false" viewBox="0 -443 812 600.8"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D463" d="M173 380Q173 405 154 405Q130 405 104 376T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Q21 294 29 316T53 368T97 419T160 441Q202 441 225 417T249 361Q249 344 246 335Q246 329 231 291T200 202T182 113Q182 86 187 69Q200 26 250 26Q287 26 319 60T369 139T398 222T409 277Q409 300 401 317T383 343T365 361T357 383Q357 405 376 424T417 443Q436 443 451 425T467 367Q467 340 455 284T418 159T347 40T241 -11Q177 -11 139 22Q102 54 102 117Q102 148 110 181T151 298Q173 362 173 380Z"></path></g><g data-mml-node="mi" transform="translate(518,-150) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container>”，翻译错了）</p>
 <p>我很快就做出了<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="7.39ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 3266.6 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D450" d="M34 159Q34 268 120 355T306 442Q362 442 394 418T427 355Q427 326 408 306T360 285Q341 285 330 295T319 325T330 359T352 380T366 386H367Q367 388 361 392T340 400T306 404Q276 404 249 390Q228 381 206 359Q162 315 142 235T121 119Q121 73 147 50Q169 26 205 26H209Q321 26 394 111Q403 121 406 121Q410 121 419 112T429 98T420 83T391 55T346 25T282 0T202 -11Q127 -11 81 37T34 159Z"></path></g><g data-mml-node="mo" transform="translate(710.8,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mn" transform="translate(1766.6,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(2266.6,0)"><g data-mml-node="mo"><path data-c="2F" d="M423 750Q432 750 438 744T444 730Q444 725 271 248T92 -240Q85 -250 75 -250Q68 -250 62 -245T56 -231Q56 -221 230 257T407 740Q411 750 423 750Z"></path></g></g><g data-mml-node="mn" transform="translate(2766.6,0)"><path data-c="34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path></g></g></g></svg></mjx-container>的方案，那就是首先查看前一半的报价（每个都拒绝），然后按照前一半中的最高报价作为接下来的标价，一旦有人高于标价，就卖给他，证明已经在<a target="_blank" rel="noopener" href="https://c-come.github.io/2023/09/02/%E3%80%90%E7%BB%83%E4%B9%A0%E3%80%91Twenty%20Lectures%20on%20Algorithmic%C2%A0Game%20Theory/">【练习】Twenty Lectures on Algorithmic Game Theory | Home of Mr. 5</a>给出。</p>
