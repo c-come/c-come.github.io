@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="问题描述抛硬币是一种非常简单流行的随机试验。抛出一枚硬币，应声落地，正反即知。 Alice和Bob最近有点纠纷，他们打算让上天决定是谁错了。但他们现在不在同一个地方，而且也没法视频。 因此现在，Alice和Bob需要在远程语音通话时抛一枚硬币。 然而，两个人都有可能为了获胜而说谎。 那么如何设计一个机制，使得这个抛硬币过程能够可靠地实现呢？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【小知识】怎么远程抛一枚硬币？">
+<meta property="og:url" content="http://example.com/2023/03/29/%E3%80%90%E5%B0%8F%E7%9F%A5%E8%AF%86%E3%80%91%E6%80%8E%E4%B9%88%E8%BF%9C%E7%A8%8B%E6%8A%9B%E4%B8%80%E6%9E%9A%E7%A1%AC%E5%B8%81%EF%BC%9F/index.html">
+<meta property="og:site_name" content="Home of Mr. 5">
+<meta property="og:description" content="问题描述抛硬币是一种非常简单流行的随机试验。抛出一枚硬币，应声落地，正反即知。 Alice和Bob最近有点纠纷，他们打算让上天决定是谁错了。但他们现在不在同一个地方，而且也没法视频。 因此现在，Alice和Bob需要在远程语音通话时抛一枚硬币。 然而，两个人都有可能为了获胜而说谎。 那么如何设计一个机制，使得这个抛硬币过程能够可靠地实现呢？">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-29T06:44:03.000Z">
+<meta property="article:modified_time" content="2023-04-25T04:29:37.756Z">
+<meta property="article:author" content="Wenhao Wu">
+<meta property="article:tag" content="密码学">
+<meta property="article:tag" content="通信">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/03/29/%E3%80%90%E5%B0%8F%E7%9F%A5%E8%AF%86%E3%80%91%E6%80%8E%E4%B9%88%E8%BF%9C%E7%A8%8B%E6%8A%9B%E4%B8%80%E6%9E%9A%E7%A1%AC%E5%B8%81%EF%BC%9F/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2023/03/29/%E3%80%90%E5%B0%8F%E7%9F%A5%E8%AF%86%E3%80%91%E6%80%8E%E4%B9%88%E8%BF%9C%E7%A8%8B%E6%8A%9B%E4%B8%80%E6%9E%9A%E7%A1%AC%E5%B8%81%EF%BC%9F/","path":"2023/03/29/【小知识】怎么远程抛一枚硬币？/","title":"【小知识】怎么远程抛一枚硬币？"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【小知识】怎么远程抛一枚硬币？ | Home of Mr. 5</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Home of Mr. 5</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">some silly thoughts</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">解决方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%8D%E8%81%8A%E8%81%8A"><span class="nav-number">3.</span> <span class="nav-text">再聊聊</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Wenhao Wu"
+      src="https://f4.bcbits.com/img/a3113611708_16.jpg">
+  <p class="site-author-name" itemprop="name">Wenhao Wu</p>
+  <div class="site-description" itemprop="description">Hello everyone!<br>This is my academic blog!<br>I'm a senior undergraduate student with broad interests in TCS, math and philosophy.<br><br><i>Nothing is more practical than a good theory.</i><br><i>----Kurt Lewin</i><br><br><i>Computer science is no more about computers than astronomy is about telescopes.</i><br><i>----Michael Fellows</i><br><br><i>Wir müssen wissen, Wir werden wissen.</i><br><i>----David Hilbert</i></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">41</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/29/%E3%80%90%E5%B0%8F%E7%9F%A5%E8%AF%86%E3%80%91%E6%80%8E%E4%B9%88%E8%BF%9C%E7%A8%8B%E6%8A%9B%E4%B8%80%E6%9E%9A%E7%A1%AC%E5%B8%81%EF%BC%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://f4.bcbits.com/img/a3113611708_16.jpg">
+      <meta itemprop="name" content="Wenhao Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Home of Mr. 5">
+      <meta itemprop="description" content="Hello everyone!<br>This is my academic blog!<br>I'm a senior undergraduate student with broad interests in TCS, math and philosophy.<br><br><i>Nothing is more practical than a good theory.</i><br><i>----Kurt Lewin</i><br><br><i>Computer science is no more about computers than astronomy is about telescopes.</i><br><i>----Michael Fellows</i><br><br><i>Wir müssen wissen, Wir werden wissen.</i><br><i>----David Hilbert</i>">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【小知识】怎么远程抛一枚硬币？ | Home of Mr. 5">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【小知识】怎么远程抛一枚硬币？
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-29 14:44:03" itemprop="dateCreated datePublished" datetime="2023-03-29T14:44:03+08:00">2023-03-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-25 12:29:37" itemprop="dateModified" datetime="2023-04-25T12:29:37+08:00">2023-04-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">小知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>抛硬币是一种非常简单流行的随机试验。抛出一枚硬币，应声落地，正反即知。</p>
+<p>Alice和Bob最近有点纠纷，他们打算让上天决定是谁错了。但他们现在不在同一个地方，而且也没法视频。</p>
+<p>因此现在，Alice和Bob需要在远程语音通话时抛一枚硬币。</p>
+<p>然而，两个人都有可能为了获胜而说谎。</p>
+<p>那么如何设计一个机制，使得这个抛硬币过程能够可靠地实现呢？</p>
+<span id="more"></span>
+<hr>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>如果啥都不考虑，第一反应显然是这样的：</p>
+<p>Alice和Bob先商量好哪面朝上代表谁赢，比方说，正面朝上Alice赢，反面朝上Bob赢。</p>
+<p>接着Alice抛硬币，把结果告诉Bob。</p>
+<p>然而，就算抛掷结果是反面朝上，Alice也可以说谎告诉Bob是正面朝上，Bob也没法证明Alice说谎了。</p>
+<p>而如果让Alice先抛硬币并宣布结果，然后Bob再说自己心里选的是哪一面，Bob同样也可以说谎。</p>
+<p>这样看来，可靠的远程抛硬币似乎不可能做到，是吗？</p>
+<p>其实是可以做到的。</p>
+<p>一个正确的解决方案是这样的：</p>
+<ol>
+<li><p>Alice和Bob私下各自选择一个随机词，例如分别为<code>bubblejet</code>和<code>knockback</code>。</p>
+</li>
+<li><p>Alice私下决定用“反面”（tails）代表自己获胜。</p>
+</li>
+<li><p>Bob 将他选择的单词<code>knockback</code>发送给Alice。</p>
+</li>
+<li><p>Alice计算一个字符串的哈希密文，其中包括两人选定的单词和自己选择的获胜面（例如<code>bubblejet knockback tails</code>），并将该密文（例如<code>3fe97d8e6456a1dce4508d00251345e3</code>）发送给Bob。</p>
+</li>
+<li><p>Bob 进行物理上的抛硬币，并向 Alice 宣布结果，正面或反面。</p>
+</li>
+<li><p>Alice透露她加密的字符串是<code>bubblejet knockback tails</code>。</p>
+</li>
+<li><p>Bob自行确认<code>3fe97d8e6456a1dce4508d00251345e3</code>确实是<code>bubblejet knockback tails</code>的密文。</p>
+</li>
+<li><p>双方现在可以确定Alice赌的“反面”是否与Bob的抛硬币结果相匹配。</p>
+</li>
+</ol>
+<hr>
+<h2 id="再聊聊"><a href="#再聊聊" class="headerlink" title="再聊聊"></a>再聊聊</h2><p>为什么这个机制能保证双方都无法造假（更准确地说是有效造假）呢？</p>
+<p>Wiki上是这样说的：</p>
+<blockquote>
+<p>Bob, by providing his own random word, guarantees that Alice is not able to precompute an image pair of “tail/random string” or “head/random string”, for two different random words. Bob is also unable to reverse Alice’s hash to see what her chosen outcome was before flipping the coin, and to lie effectively about its outcome, because he does not know Alice’s random word at that point in the process.</p>
+<p>Bob通过提供他自己的随机词，确保Alice无法预先计算出两个不同的随机词的“反面/随机字符串”或“正面/随机字符串”的像对。此外，Bob也无法通过反向解密Alice的哈希值来查看她在抛硬币之前选择的结果，也不能有效地关于结果撒谎，因为他在该过程中不知道Alice的随机词。</p>
+</blockquote>
+<p>这里通过举例子来更详细地谈谈为什么两个人的随机词都是必要的：</p>
+<p>如果Alice不用随机词。那么Bob就可以将<code>knockback tails</code>和<code>knockback head</code>的哈希值都算一遍，然后对照一下Alice发来的哈希值，就知道Alice选的是哪一面代表获胜，Bob就可以在物理抛硬币后对Alice撒谎。</p>
+<p>如果Bob不用随机词。那么Alice就存在提前构造出两个哈希碰撞的字符串（其中一个以head结尾，一个以tails结尾）的可能性。在Bob公布结果物理抛硬币的结果后，Alice可以选择对自己有利的那个字符串告知Bob，Bob也无法从哈希值上发现任何问题。</p>
+<hr>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Commitment_scheme">Commitment scheme - Wikipedia</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%AF%86%E7%A0%81%E5%AD%A6/" rel="tag"># 密码学</a>
+              <a href="/tags/%E9%80%9A%E4%BF%A1/" rel="tag"># 通信</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/03/29/%E3%80%90%E8%AE%BA%E6%96%87%E8%AF%84%E8%BF%B0%E3%80%91An-Economics-Based-Analysis-of-RANKING-for-Online-Bipartite-Matching/" rel="prev" title="【论文评述】An Economics-Based Analysis of RANKING for Online Bipartite Matching">
+                  <i class="fa fa-chevron-left"></i> 【论文评述】An Economics-Based Analysis of RANKING for Online Bipartite Matching
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/04/07/%E3%80%90%E7%90%86%E8%AE%BA%E5%AD%A6%E4%B9%A0%E3%80%91minmax%E2%80%94%E2%80%94%E4%BB%8E%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E5%88%B0%E5%A7%9A%E6%9C%9F%E6%99%BA/" rel="next" title="【理论学习】minmax——从冯诺依曼到姚期智">
+                  【理论学习】minmax——从冯诺依曼到姚期智 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wenhao Wu</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","mhchem":true,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"c-come","repo":"blog_comment","client_id":"9f567569ec504c5a6ecc","client_secret":"fb72b2f8de41bfddfde00be721b49346d6c88760","admin_user":"c-come","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"18be956725b1db2cf8527c8daaf5a462"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
